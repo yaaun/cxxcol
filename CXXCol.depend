@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1467671611 source:c:\users\tomasz\development\cpp\cxxcol\src\key_translate.cpp
+	"rlutil/rlutil.h"
+
+1464936568 c:\users\tomasz\development\cpp\cxxcol\src\rlutil\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+

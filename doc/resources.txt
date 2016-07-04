@@ -7,6 +7,7 @@ Resources
     1.  Mineral resources
     2.  Building materials
     3.  Finished products
+    4.  Metals
 
 
 1.  Mineral resources
@@ -37,9 +38,9 @@ Concrete-like building material that is easily made. Cheap, but not particularly
 durable against any sort of attack.
 
 
-### Durasteel prefabricate
-Prefabricated sections of durasteel that can be quickly assembled into a
-building. Faster to build and stronger than mooncrete, but expensive and
+### Steel prefabricate
+Prefabricated sections of construction steel that can be quickly assembled into
+a building. Faster to build and stronger than mooncrete, but expensive and
 difficult to make.
 
 
@@ -49,6 +50,9 @@ Parts used to build and repair basic machines.
 
 ### Electronics
 Parts necessary for the construction and maintenance of advanced technologies.
+
+
+
 
 
 3.  Finished products
@@ -69,3 +73,26 @@ Machine that speeds construction work (equivalent to 10 colonists). Manned by
 
 ### Slugs
 Ammunition for railguns, made from a heavy metal.
+
+
+4.  Metals
+----------
+### Iron
+The most common metal, appears in large amounts nearly everywhere. Used to
+make steel and machine components, as it is generally not worth exporting.
+
+
+### Copper
+A less abundant, but still common, metal used primarily for electronics. Can be
+worth exporting during periods of high demand.
+
+
+### Tungsten
+A somewhat rare, heavy, dense metal. Required in many applications where extreme
+heat and abrasion is encountered, such as drill cutting blades. Generally
+profitable to export.
+
+
+### Platinum
+A rare, noble metal. Commonly used as a catalyst, it is invaluable in devices
+such as scrubbers. Also a lucrative export, for the above reasons.
