@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1467671611 source:c:\users\tomasz\development\cpp\cxxcol\src\key_translate.cpp
+1467672959 source:c:\users\tomasz\development\cpp\cxxcol\src\key_translate.cpp
 	"rlutil/rlutil.h"
+	"key_translate.hpp"
 
 1464936568 c:\users\tomasz\development\cpp\cxxcol\src\rlutil\rlutil.h
 	<iostream>
@@ -15,4 +16,6 @@
 	<sys/ioctl.h>
 	<sys/types.h>
 	<sys/time.h>
+
+1467672948 c:\users\tomasz\development\cpp\cxxcol\src\key_translate.hpp
 

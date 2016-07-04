@@ -3,13 +3,7 @@
 #include "rlutil/rlutil.h"
 #endif
 
-enum class KeyAction : int {
-    BACK,
-    CANCEL,
-    ENTER,
-    PREV,
-    NEXT
-};
+#include "key_translate.hpp"
 
 
 KeyAction translate_keycode(int keycode) {
