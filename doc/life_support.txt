@@ -1,0 +1,49 @@
+Life support and essential resources
+====================================
+
+
+1.  General overview
+--------------------
+Colonists must have their basic needs fulfilled in order to be able to live and
+work. This amounts to:
+  a.  Breathable atmosphere
+  b.  Adequate nutrition
+  c.  Sufficient living space
+
+
+1.  Atmosphere
+--------------
+Maintaining a breathable atmosphere is of prime importance, without which
+everyone in the colony will perish immediately.
+
+The atmosphere within the colony is maintained by scrubbers. These machines
+require power to function. A standard scrubber can supply air for up to 20
+colonists. Since it is easy for a single scrubber to fail, it is highly advised
+at least several redundant machines.
+
+If the colony's scrubbers are overloaded, the air within will start to decay.
+How quickly this occurs depends on the number of colonists versus the number of
+functional scrubbers. Having a decayed atmosphere within the colony will
+inevitably lead to violence within a short time, as well as making the remaining
+scrubbers more likely to break down. A severely depleted atmosphere will cause
+colonists to die off one by one.
+
+
+2.  Nutrition
+-------------
+Colonists must be fed in order to work. Failure to supply enough food will
+result in famine, gradual death, and will likely end in a revolt.
+
+Food can be either imported or produced on site, in hydroponic farms.
+Farming is inevitably linked to a long latency period in which no food is
+produced, which can be as long as 3 months (6 turns). When the harvest is ready,
+adequate storage space must be available, or else the produced food will go to
+waste.
+
+
+3.  Living space
+----------------
+Adequate living conditions are vital to keep colonists productive. Shelter is
+provided by barracks, each of which can house up to 15 colonists. It is,
+however, not advised to fill barracks to more than 80% their maximum capacity,
+since cramped conditions make colonists much more likely to riot.

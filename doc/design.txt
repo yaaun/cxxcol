@@ -1,0 +1,18 @@
+CXXCol initial design document
+==============================
+
+
+1.  Concept
+-----------
+CXXCol (working title) is intended to be a text-based, space-themed 4X strategy
+game. Its scope is deliberately limited in order to speed development.
+
+The primary gameplay focuses on the management of a planetoid mining colony.
+The main objective is to extract, refine and export rare metals in order to
+fulfill a fixed quota.
+
+Among the dangers that await the player are such things as:
+  * solar flares (all times)
+  * shortages of life support resources (early stage)
+  * pirate attacks (once the colony is rich enough)
+  * planetoid instability (once a critical amount of minerals has been mined)

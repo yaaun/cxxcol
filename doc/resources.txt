@@ -1,0 +1,71 @@
+Resources
+=========
+
+
+0.  Table of contents
+---------------------
+    1.  Mineral resources
+    2.  Building materials
+    3.  Finished products
+
+
+1.  Mineral resources
+---------------------
+### Regolith
+The top level of rock covering the planetoid. This rock is poor in minerals,
+but relatively rich in water, which can be further refined into heavy water and
+tailings. Can also be directly used to make mooncrete. Regolith is gathered by
+scrapers.
+
+
+### Ore
+Rock mined underground in areas that have been confirmed to contain viable
+concentrations of metals. The composition of a given batch of ore is randomized,
+but always contains at least 25% metals by weight. Ore can be smelted into pure
+metals and tailings. Ore is mined with drilling machines.
+
+
+### Tailings
+Finely crushed rock that has had its metal content removed. Only useful as a
+substrate for mooncrete.
+
+
+2.  Building materials
+----------------------
+### Mooncrete
+Concrete-like building material that is easily made. Cheap, but not particularly
+durable against any sort of attack.
+
+
+### Durasteel prefabricate
+Prefabricated sections of durasteel that can be quickly assembled into a
+building. Faster to build and stronger than mooncrete, but expensive and
+difficult to make.
+
+
+### Machine components
+Parts used to build and repair basic machines.
+
+
+### Electronics
+Parts necessary for the construction and maintenance of advanced technologies.
+
+
+3.  Finished products
+---------------------
+### Scraper
+Machine used to gather regolith. Requires 1 worker to operate (unless equipped
+as autonomous).
+
+
+### Drill
+Machine used to extract ore. Requires 1 worker to operate (unless autonomous).
+
+
+### Construction robot
+Machine that speeds construction work (equivalent to 10 colonists). Manned by
+1 worker (unless autonomous).
+
+
+### Slugs
+Ammunition for railguns, made from a heavy metal.

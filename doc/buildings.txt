@@ -1,0 +1,25 @@
+Buildings and permanent structures
+==================================
+
+
+0.  Table of contents
+---------------------
+    1.  Buildings
+    2.  Industrial facilities
+    3.  Defense and military
+
+
+2.  Industrial facilties
+------------------------
+
+3.  Defense and military
+------------------------
+### Rail gun
+Most basic type of defense armament. Requires power, slugs, and 1 colonist
+to operate.
+
+
+### Laser cannon
+Long-range, highly accurate anti-ship weapon. Requires large amounts of power
+to operate - can cause damage to existing power plants if its energy demands
+are not met.
