@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="src/game" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="src/game" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,10 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="src/game/Building.cpp" />
+		<Unit filename="src/game/Building.hpp" />
+		<Unit filename="src/game/Game.cpp" />
+		<Unit filename="src/game/Game.hpp" />
 		<Unit filename="src/global_defs.hpp" />
 		<Unit filename="src/main.cpp" />
-		<Unit filename="src/misc/key_translate.cpp" />
-		<Unit filename="src/misc/windows_util.cpp" />
+		<Unit filename="src/misc/randgen" />
+		<Unit filename="src/misc/randgen.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
