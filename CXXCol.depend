@@ -17,5 +17,47 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1467672948 c:\users\tomasz\development\cpp\cxxcol\src\key_translate.hpp
+1467721831 c:\users\tomasz\development\cpp\cxxcol\src\key_translate.hpp
+
+1467735619 source:c:\users\tomasz\development\cpp\cxxcol\src\main.cpp
+	<iostream>
+	<string>
+	<deque>
+	"misc/rlutil.h"
+	"misc/key_translate.hpp"
+	"misc/console_util.hpp"
+	"misc/print.hpp"
+
+1467735343 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\key_translate.cpp
+	"rlutil.h"
+	"key_translate.hpp"
+
+1467724238 c:\users\tomasz\development\cpp\cxxcol\src\misc\console_util.hpp
+
+1467730220 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\windows_util.cpp
+	"console_util.hpp"
+	<windows.h>
+
+1467735644 c:\users\tomasz\development\cpp\cxxcol\src\misc\print.hpp
+	<string>
+
+1467735733 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\print.cpp
+	"print.hpp"
+	"rlutil.h"
+
+1464936568 c:\users\tomasz\development\cpp\cxxcol\src\misc\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1467721831 c:\users\tomasz\development\cpp\cxxcol\src\misc\key_translate.hpp
 

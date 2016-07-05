@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="src/key_translate.cpp" />
+		<Unit filename="src/global_defs.hpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/misc/key_translate.cpp" />
+		<Unit filename="src/misc/windows_util.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

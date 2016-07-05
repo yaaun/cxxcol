@@ -1,0 +1,9 @@
+#ifndef GLOBAL_DEFS_HPP_INCLUDED
+#define GLOBAL_DEFS_HPP_INCLUDED
+
+enum class UIState {
+    DEFAULT,
+    QUIT_CONFIRM
+};
+
+#endif // GLOBAL_DEFS_HPP_INCLUDED

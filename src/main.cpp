@@ -1,31 +1,37 @@
 #include <iostream>
 #include <string>
 
-#ifndef RLUTIL_H
-#define RLUTIL_H
-#include "rlutil/rlutil.h"
-#endif
+#include "global_defs.hpp"
 
-#include "key_translate.hpp"
+
 
 int main() {
     bool running = true;
-    int keycode;
-    KeyAction action;
+    std::string command;
+    std::string prompt{"> "};
+    UIState uistate = UIState::DEFAULT;
 
     while (running) {
-        keycode = rlutil::getkey();
+        std::cout << prompt;
+        std::cin >> command;
 
-        std::cout << keycode << std::endl;
+        if (uistate == UIState::QUIT_CONFIRM) {
+            if (command == "Y") {
+                running = false;
+            } else {
+                std::cout << "Exit canceled." << std::endl;
+            }
 
-        action = translate_keycode(keycode);
+            uistate = UIState::DEFAULT;
+        } else if (uistate == UIState::DEFAULT) {
+            if (command == "status") {
 
-        switch (action) {
-        case KeyAction::PREV:
-        case KeyAction::BACK:
-            //running = false;
-            //std::cout << "Running is " << running << std::endl;
-            break;
+            } else if (command == "exit" || command == "quit") {
+                std::cout << "Do you really want to exit? (input capital Y to confirm)" << std::endl;
+                uistate = UIState::QUIT_CONFIRM;
+            } else {
+                std::cout << "Unknown command: " << command << std::endl;
+            }
         }
     }
 
