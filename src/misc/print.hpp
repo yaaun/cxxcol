@@ -1,10 +1,6 @@
-#include <string>
-
 #ifndef PRINT_HPP_INCLUDED
 #define PRINT_HPP_INCLUDED
 
-void printCommand(std::string&, int, int);
-void printPrompt(std::string&, std::string&, int, int);
-void clearLine(int);
+void printHelp();
 
 #endif // PRINT_HPP_INCLUDED

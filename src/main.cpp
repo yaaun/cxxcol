@@ -11,6 +11,8 @@ int main() {
     std::string prompt{"> "};
     UIState uistate = UIState::DEFAULT;
 
+    Game* state = nullptr;
+
     while (running) {
         std::cout << prompt;
         std::cin >> command;
@@ -26,6 +28,8 @@ int main() {
         } else if (uistate == UIState::DEFAULT) {
             if (command == "status") {
 
+            } else if (command == "new") {
+                state = new Game;
             } else if (command == "exit" || command == "quit") {
                 std::cout << "Do you really want to exit? (input capital Y to confirm)" << std::endl;
                 uistate = UIState::QUIT_CONFIRM;
@@ -34,6 +38,8 @@ int main() {
             }
         }
     }
+
+    delete state;
 
     return 0;
 }
