@@ -2,7 +2,7 @@
 #include <string>
 
 #include "global_defs.hpp"
-
+#include "game/Game.hpp"
 
 
 int main() {
@@ -27,7 +27,6 @@ int main() {
             uistate = UIState::DEFAULT;
         } else if (uistate == UIState::DEFAULT) {
             if (command == "status") {
-
             } else if (command == "new") {
                 state = new Game;
             } else if (command == "exit" || command == "quit") {

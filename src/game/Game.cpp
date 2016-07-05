@@ -13,7 +13,7 @@ void Game::addCredits(long long creds) {
     credits += creds;
 }
 
-long long Game::getCredits() {
+long long Game::getCredits() const {
     return credits;
 }
 
