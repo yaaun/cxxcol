@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 #include "Commandlet.hpp"
@@ -12,6 +13,11 @@ bool DefaultCommand::keepRunning() {
 
 Commandlet* DefaultCommand::runCommand(std::string cmd) {
     Game* const state = *state_ptr; //  For convenience.
+    bool statePresent;
+
+    if (state != nullptr) {
+        statePresent = true;
+    }
 
     if (cmd == "help") {
         std::cout << "Default mode commands" << std::endl;
@@ -21,7 +27,22 @@ Commandlet* DefaultCommand::runCommand(std::string cmd) {
         std::cout << "new - start new game" << std::endl;
         std::cout << "quit - same as exit" << std::endl;
         std::cout << std::endl;
-    } else if (cmd == "next") {
+    } else if (cmd == "status" && statePresent) {
+        std::cout << std::setprecision(3);
+        double co2 = state->getCO2() * 100;
+
+        if (co2 >= 8) {
+            std::cout << "DANGER: EXTREME CO2 CONCENTRATION (" << co2 << "%)" << std::endl << std::endl;
+        } else if (co2 >= 5) {
+            std::cout << "DANGER: VERY HIGH CO2 CONCENTRATION (" << co2 << "%)" << std::endl << std::endl;
+        } else if (co2 >= 3) {
+            std::cout << "DANGER: HIGH CO2 CONCENTRATION (" << co2 << "%)" << std::endl << std::endl;
+        } else if (co2 >= 1) {
+            std::cout << "Warning: excessive CO2 concentration (" << co2 << "%)" << std::endl << std::endl;
+        }
+
+
+    } else if (cmd == "next" && statePresent) {
         state->next();
     } else if (cmd == "new") {
         std::string planetName = randomPlanetoidName();
@@ -60,6 +81,10 @@ Commandlet* DefaultCommand::runCommand(std::string cmd) {
         std::cout << std::endl << "Planetoid will be called " << planetName << "." << std::endl;
         *state_ptr = new Game{planetName};
     } else if (cmd == "exit" || cmd == "quit") {
+        run = false;
+    } else if (!statePresent
+               && (cmd == "status" || cmd == "next")) {
+        std::cout << "Error: no game in progress (start a new game with 'new' or load a save with 'load')" << std::endl;
     } else {
         std::cout << "Error: unknown command '" << cmd << "' (try 'help' if you don't know what to do)" << std::endl;
     }

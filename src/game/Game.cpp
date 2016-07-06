@@ -6,7 +6,7 @@
 Game::Game():
     credits{0}
     {
-    resources.insert("ore");
+
 }
 
 Game::Game(std::string planetName):
@@ -44,6 +44,26 @@ void Game::setPlanetName(std::string s) {
     planetName = s;
 }
 
+unsigned Game::getPopulation() const {
+    return workers + soldiers + scientists;
+}
+
+unsigned Game::getWorkers() const {
+    return workers;
+}
+
+unsigned Game::getSoldiers() const {
+    return soldiers;
+}
+
+unsigned Game::getScientists() const {
+    return scientists;
+}
+
+unsigned Game::getFreeWorkers() const {
+
+}
+
 double Game::getAirVolume() const {
     double sum = 0;
 
@@ -55,5 +75,6 @@ double Game::getAirVolume() const {
 }
 
 double Game::getCO2() const {
+    return co2_volume / getAirVolume();
 }
 

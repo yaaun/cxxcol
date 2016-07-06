@@ -28,6 +28,15 @@ class Game {
         double getAirVolume() const;
         double getCO2() const;
 
+        unsigned getPopulation() const;
+        unsigned getWorkers() const;
+        unsigned getSoldiers() const;
+        unsigned getScientists() const;
+
+        unsigned getFreeWorkers() const;
+        unsigned getFreeSoldiers() const;
+        unsigned getFreeScientists() const;
+
         std::list<Building*> getBuildingsByType(std::string type);
     protected:
 
@@ -37,8 +46,8 @@ class Game {
         std::string planetName;
         std::map<std::string, Resource> resources;
 
-        double air_volume;
-        double co2_conc;
+        double co2_volume;
+        unsigned workers = 0, soldiers = 0, scientists = 0;
 };
 
 #endif // GAME_H
