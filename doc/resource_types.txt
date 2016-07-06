@@ -3,7 +3,25 @@ Resource types
 
 Internal resource types
 -----------------------
-### ore_iron
-### ore_tungsten
-### ore_uranium
-### ore_
+### Metal ores
+All of the below listed are resources that are transformed into an equivalent
+mass of metal once refined.
+  * ore_iron
+  * ore_copper
+  * ore_tungsten
+  * ore_platinum
+  * ore_uranium
+
+Unrefined ores are not eligible for export.
+
+
+### Metals
+Refined metals may be either exported or used in further construction.
+
+
+### Food
+Food is a special resource, in that only so much can be stored as there are
+freezers. Food may not be exported.
+
+
+### Overburden

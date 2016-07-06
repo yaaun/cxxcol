@@ -22,13 +22,16 @@ scrapers.
 ### Ore
 Rock mined underground in areas that have been confirmed to contain viable
 concentrations of metals. The composition of a given batch of ore is randomized,
-but always contains at least 25% metals by weight. Ore can be smelted into pure
-metals and tailings. Ore is mined with drilling machines.
+but always contains at least 25% metals by weight. Ore can be refined into pure
+metals. Ore is mined with drilling machines, which produces tailings as a side
+effect.
 
 
 ### Tailings
 Finely crushed rock that has had its metal content removed. Only useful as a
-substrate for mooncrete.
+substrate for mooncrete. Tailings are usually in abundant supply, since all
+mining operations produce large amounts of tailings (which also counts as
+work for mining machines).
 
 
 2.  Building materials
@@ -81,10 +84,15 @@ Ammunition for railguns, made from a heavy metal.
 The most common metal, appears in large amounts nearly everywhere. Used to
 make steel and machine components, as it is generally not worth exporting.
 
+    Relative value: 1
+    Relative abundance: 100
 
 ### Copper
 A less abundant, but still common, metal used primarily for electronics. Can be
 worth exporting during periods of high demand.
+
+    Relative value: 3
+    Relative abundance: 30
 
 
 ### Tungsten
@@ -92,7 +100,21 @@ A somewhat rare, heavy, dense metal. Required in many applications where extreme
 heat and abrasion is encountered, such as drill cutting blades. Generally
 profitable to export.
 
+    Relative value: 20
+    Relative abundance: 5
+
 
 ### Platinum
 A rare, noble metal. Commonly used as a catalyst, it is invaluable in devices
 such as scrubbers. Also a lucrative export, for the above reasons.
+
+    Relative value: 50
+    Relative abundance: 1
+
+
+### Uranium
+Rare, radioactive metal. Useful as a fission reactor fuel. Reasonably valuable
+export as well.
+
+    Relative value: 35
+    Relative abundance: 1
