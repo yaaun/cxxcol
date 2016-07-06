@@ -1,0 +1,9 @@
+Resource types
+==============
+
+Internal resource types
+-----------------------
+### ore_iron
+### ore_tungsten
+### ore_uranium
+### ore_

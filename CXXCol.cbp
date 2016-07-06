@@ -44,6 +44,10 @@
 		<Unit filename="src/game/Building.hpp" />
 		<Unit filename="src/game/Game.cpp" />
 		<Unit filename="src/game/Game.hpp" />
+		<Unit filename="src/game/Resource.cpp" />
+		<Unit filename="src/game/Resource.hpp" />
+		<Unit filename="src/game/Scrubber.cpp" />
+		<Unit filename="src/game/Scrubber.hpp" />
 		<Unit filename="src/global_defs.hpp" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="src/misc/print.cpp" />
