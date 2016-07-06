@@ -3,6 +3,7 @@
 
 enum class UIState {
     DEFAULT,
+    NEW_PLANET,
     QUIT_CONFIRM
 };
 

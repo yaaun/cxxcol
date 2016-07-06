@@ -1,45 +1,47 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
 #include "global_defs.hpp"
-#include "game/Game.hpp"
+#include "Commandlet.hpp"
+#include "DefaultCommand.hpp"
 
+#include "game/Game.hpp"
+#include "misc/print.hpp"
 
 int main() {
     bool running = true;
     std::string command;
     std::string prompt{"> "};
-    UIState uistate = UIState::DEFAULT;
+    Game** stateptr = new Game*;
+    Commandlet* cmd = new DefaultCommand{stateptr};
+    Commandlet* tempcmd = cmd;
 
-    Game* state = nullptr;
+
+    //  Title screen.
+    printTitle();
+    //  Seed randgen.
+    srand(time(nullptr));
+
+    *stateptr = nullptr;
 
     while (running) {
         std::cout << prompt;
         std::cin >> command;
 
-        if (uistate == UIState::QUIT_CONFIRM) {
-            if (command == "Y") {
-                running = false;
-            } else {
-                std::cout << "Exit canceled." << std::endl;
-            }
+        cmd->runCommand(command);
+        running = cmd->keepRunning();
 
-            uistate = UIState::DEFAULT;
-        } else if (uistate == UIState::DEFAULT) {
-            if (command == "status") {
-            } else if (command == "new") {
-                state = new Game;
-
-            } else if (command == "exit" || command == "quit") {
-                std::cout << "Do you really want to exit? (input capital Y to confirm)" << std::endl;
-                uistate = UIState::QUIT_CONFIRM;
-            } else {
-                std::cout << "Unknown command: " << command << std::endl;
-            }
+        if (tempcmd != cmd) {
+            delete cmd;
+            cmd = tempcmd;
         }
     }
 
-    delete state;
+    delete *stateptr;
+    delete stateptr;
+    delete cmd;
 
     return 0;
 }

@@ -17,5 +17,9 @@ int Building::getHealth() const {
 }
 
 int Building::getMaxHealth() const {
-    return maxHealth;
+    return max_health;
+}
+
+double Building::getAirVolume() const {
+    return air_volume;
 }

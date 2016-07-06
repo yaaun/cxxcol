@@ -19,13 +19,15 @@
 
 1467721831 c:\users\tomasz\development\cpp\cxxcol\src\key_translate.hpp
 
-1467735619 source:c:\users\tomasz\development\cpp\cxxcol\src\main.cpp
+1467823975 source:c:\users\tomasz\development\cpp\cxxcol\src\main.cpp
 	<iostream>
 	<string>
-	<deque>
-	"misc/rlutil.h"
-	"misc/key_translate.hpp"
-	"misc/console_util.hpp"
+	<cstdlib>
+	<ctime>
+	"global_defs.hpp"
+	"Commandlet.hpp"
+	"DefaultCommand.hpp"
+	"game/Game.hpp"
 	"misc/print.hpp"
 
 1467735343 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\key_translate.cpp
@@ -38,12 +40,11 @@
 	"console_util.hpp"
 	<windows.h>
 
-1467735644 c:\users\tomasz\development\cpp\cxxcol\src\misc\print.hpp
-	<string>
+1467750556 c:\users\tomasz\development\cpp\cxxcol\src\misc\print.hpp
 
-1467735733 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\print.cpp
+1467790862 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\print.cpp
 	"print.hpp"
-	"rlutil.h"
+	<iostream>
 
 1464936568 c:\users\tomasz\development\cpp\cxxcol\src\misc\rlutil.h
 	<iostream>
@@ -61,8 +62,51 @@
 
 1467721831 c:\users\tomasz\development\cpp\cxxcol\src\misc\key_translate.hpp
 
-1467750495 source:c:\users\tomasz\development\cpp\cxxcol\src\game\game.cpp
+1467825713 source:c:\users\tomasz\development\cpp\cxxcol\src\game\game.cpp
 	"Game.hpp"
 
-1467750509 c:\users\tomasz\development\cpp\cxxcol\src\game\game.hpp
+1467825757 c:\users\tomasz\development\cpp\cxxcol\src\game\game.hpp
+	<list>
+	<map>
+	<string>
+	"Building.hpp"
+
+1467790563 source:c:\users\tomasz\development\cpp\cxxcol\src\game\building.cpp
+	"Building.hpp"
+
+1467790548 c:\users\tomasz\development\cpp\cxxcol\src\game\building.hpp
+	<string>
+
+1467821386 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\randgen.cpp
+	<cstdlib>
+	<string>
+
+1467806421 c:\users\tomasz\development\cpp\cxxcol\src\global_defs.hpp
+
+1467817547 source:c:\users\tomasz\development\cpp\cxxcol\src\commandlet.cpp
+	"Commandlet.hpp"
+
+1467820290 c:\users\tomasz\development\cpp\cxxcol\src\commandlet.hpp
+	<string>
+	"game/Game.hpp"
+
+1467824489 source:c:\users\tomasz\development\cpp\cxxcol\src\defaultcommand.cpp
+	<iostream>
+	<string>
+	"Commandlet.hpp"
+	"DefaultCommand.hpp"
+	"game/Game.hpp"
+	"misc/randgen.hpp"
+
+1467817754 c:\users\tomasz\development\cpp\cxxcol\src\defaultcommand.hpp
+	"Commandlet.hpp"
+	"Game.hpp"
+
+1467820850 c:\users\tomasz\development\cpp\cxxcol\src\misc\randgen.hpp
+
+1467825900 source:c:\users\tomasz\development\cpp\cxxcol\src\game\resource.cpp
+	"Resource.hpp"
+
+1467825928 c:\users\tomasz\development\cpp\cxxcol\src\game\resource.hpp
+	<string>
 
