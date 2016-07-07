@@ -9,29 +9,32 @@ class Building {
         Building() {};
         virtual ~Building() {};
 
-        const std::string& getName() const;
-        int getHealth() const;
-        int getMaxHealth() const;
-        double getAirVolume() const;
+        virtual const std::string& getName() const {return name;}
+        virtual int getHealth() const {return health;}
+        virtual int getMaxHealth() const {return max_health;}
+        virtual double getAirVolume() const {return air_volume;}
 
-        unsigned getEmployedWorkers() const;
-        unsigned getEmployedSoldiers() const;
-        unsigned getEmployedScientists() const;
+        virtual unsigned getEmployedWorkers() const {return workers;}
+        virtual unsigned getEmployedSoldiers() const {return soldiers;}
+        virtual unsigned getEmployedScientists() const {return scientists;}
 
-        unsigned getMaxWorkers() const;
-        unsigned getMaxSoldiers() const;
-        unsigned getMaxScientists() const;
+        virtual unsigned getCapacity() const = 0;
+        virtual unsigned getPowerUsage() const = 0;
 
+        virtual bool isBroken() const {return broken;}
+        virtual void setBroken(bool brk) {broken = brk;}
 
+        static Building* create(const std::string& type);
     protected:
-
-    private:
         std::string name;
         int health, max_health;
         int power;
         double air_volume = 5;
+        bool broken = false;
 
+        unsigned capacity;
         unsigned workers, soldiers, scientists;
+    private:
 };
 
 #endif // BUILDING_H

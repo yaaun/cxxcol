@@ -3,14 +3,12 @@
 #include <utility>
 
 
-Game::Game():
-    credits{0}
+Game::Game()
     {
 
 }
 
 Game::Game(std::string planetName):
-    credits{0},
     planetName{planetName}
     {
 
@@ -61,14 +59,40 @@ unsigned Game::getScientists() const {
 }
 
 unsigned Game::getFreeWorkers() const {
+    unsigned total = getWorkers();
 
+    for (auto val : buildings) {
+        total -= val.second->getEmployedWorkers();
+    }
+
+    return total;
+}
+
+unsigned Game::getFreeSoldiers() const {
+    unsigned total = getSoldiers();
+
+    for (auto val : buildings) {
+        total -= val.second->getEmployedSoldiers();
+    }
+
+    return total;
+}
+
+unsigned Game::getFreeScientists() const {
+    unsigned total = getScientists();
+
+    for (auto val : buildings) {
+        total -= val.second->getEmployedScientists();
+    }
+
+    return total;
 }
 
 double Game::getAirVolume() const {
     double sum = 0;
 
-    for (Building* b : buildings) {
-        sum += b->getAirVolume();
+    for (auto val : buildings) {
+        sum += val.second->getAirVolume();
     }
 
     return sum;
@@ -78,3 +102,35 @@ double Game::getCO2() const {
     return co2_volume / getAirVolume();
 }
 
+unsigned Game::getScrubberCapacity() const {
+    auto iter = buildings.find("Scrubber");
+    unsigned cap = 0;
+
+    for (; iter != buildings.end(); iter++) {
+        cap += iter->second->getCapacity();
+    }
+
+    return cap;
+}
+
+unsigned Game::getPowerCapacity() const {
+    auto iter = buildings.find("Generator");
+    unsigned cap = 0;
+
+    for (; iter != buildings.end(); iter++) {
+        cap += iter->second->getCapacity();
+    }
+
+    return cap;
+}
+
+std::list<Building*> Game::getBuildingsByType(const std::string& type) {
+    auto iter = buildings.find(type);
+    std::list<Building*> results;
+
+    for (; iter != buildings.end(); iter++) {
+        results.push_back((*iter).second);
+    }
+
+    return results;
+}

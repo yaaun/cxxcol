@@ -17,6 +17,7 @@ class Game {
 
         /// Ends the turn.
         void next();
+        unsigned getTurnCount() const;
 
         void addCredits(long long);
         long long getCredits() const;
@@ -24,6 +25,7 @@ class Game {
 
         std::string getPlanetName() const;
         void setPlanetName(std::string);
+
 
         double getAirVolume() const;
         double getCO2() const;
@@ -37,16 +39,22 @@ class Game {
         unsigned getFreeSoldiers() const;
         unsigned getFreeScientists() const;
 
-        std::list<Building*> getBuildingsByType(std::string type);
+        unsigned getScrubberCapacity() const;
+        unsigned getPowerCapacity() const;
+
+        std::list<Building*> getBuildingsByType(const std::string& type);
+        unsigned countBuildingsByType(const std::string& type);
     protected:
 
     private:
-        long long credits;
-        std::list<Building*> buildings;
+        long long credits = 0;
+        unsigned turn_counter = 0;
+
+        std::multimap<std::string, Building*> buildings;
         std::string planetName;
         std::map<std::string, Resource> resources;
 
-        double co2_volume;
+        double co2_volume = 0;
         unsigned workers = 0, soldiers = 0, scientists = 0;
 };
 

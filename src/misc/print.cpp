@@ -2,13 +2,14 @@
 #include <iostream>
 
 
-void printHelp() {
-    std::cout << "List of game commands" << std::endl;
-    std::cout << "---------------------" << std::endl;
+void printHeader(std::string& s) {
+    std::cout << s << std::endl;
 
-    std::cout << "exit - without saving" << std::endl;
-    std::cout << "new - starts a new game" << std::endl;
-    std::cout << "quit - same as exit" << std::endl;
+    for (int i = 0; i < s.size(); i++) {
+        std::cout << '-';
+    }
+
+    std::cout << std::endl;
 }
 
 void printTitle() {

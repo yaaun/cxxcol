@@ -7,7 +7,9 @@
 class Scrubber : public Building {
     public:
         Scrubber();
-        virtual ~Scrubber();
+        virtual ~Scrubber() {};
+
+        virtual unsigned getCapacity() const override;
 
     protected:
 
