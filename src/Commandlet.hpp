@@ -7,14 +7,17 @@
 
 class Commandlet {
     public:
-        Commandlet(Game** stateptr):
-            state_ptr{stateptr} {}
+        Commandlet(std::string name, Game** stateptr):
+            state_ptr{stateptr},
+            name{name} {}
         virtual ~Commandlet() {};
 
         virtual Commandlet* runCommand(std::string) = 0;
         virtual bool keepRunning();
+        virtual const std::string& getName() const {return name;}
     protected:
         Game** state_ptr;
+        std::string name;
     private:
 };
 

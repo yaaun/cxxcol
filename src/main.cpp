@@ -16,7 +16,7 @@ int main() {
     std::string prompt{"> "};
     Game** stateptr = new Game*;
     Commandlet* cmd = new DefaultCommand{stateptr};
-    Commandlet* tempcmd = cmd;
+    Commandlet* tempcmd = nullptr;
 
 
     //  Title screen.
@@ -30,12 +30,27 @@ int main() {
         std::cout << prompt;
         std::cin >> command;
 
-        cmd->runCommand(command);
-        running = cmd->keepRunning();
+        if (tempcmd != nullptr) {
+            tempcmd->runCommand(command);
+            if (!tempcmd->keepRunning()) {
+                delete tempcmd;
+                tempcmd = nullptr;
+            }
+        } else {
+            tempcmd = cmd->runCommand(command);
+            running = cmd->keepRunning();
 
-        if (tempcmd != cmd) {
-            delete cmd;
-            cmd = tempcmd;
+            std::cout << tempcmd;
+
+            //  For one-off tempcmds.
+            if (tempcmd != nullptr) {
+                tempcmd->runCommand("");
+
+                if (!tempcmd->keepRunning()) {
+                    delete tempcmd;
+                    tempcmd = nullptr;
+                }
+            }
         }
     }
 

@@ -4,6 +4,8 @@
 
 #include "Commandlet.hpp"
 #include "DefaultCommand.hpp"
+#include "StatusCommand.hpp"
+
 #include "game/Game.hpp"
 #include "game/Building.hpp"
 #include "misc/print.hpp"
@@ -16,6 +18,7 @@ bool DefaultCommand::keepRunning() {
 Commandlet* DefaultCommand::runCommand(std::string cmd) {
     Game* const game = *state_ptr; //  For convenience.
     bool statePresent;
+    Commandlet* tempcmd = nullptr;
 
     if (game != nullptr) {
         statePresent = true;
@@ -81,20 +84,7 @@ Commandlet* DefaultCommand::runCommand(std::string cmd) {
     } else if (cmd == "power" && statePresent) {
 
     } else if (cmd == "status" && statePresent) {
-        std::cout << std::setprecision(3);
-        double co2 = game->getCO2() * 100;
-
-        if (co2 >= 8) {
-            std::cout << "DANGER: EXTREME CO2 CONCENTRATION (" << co2 << "%)" << std::endl << std::endl;
-        } else if (co2 >= 5) {
-            std::cout << "DANGER: VERY HIGH CO2 CONCENTRATION (" << co2 << "%)" << std::endl << std::endl;
-        } else if (co2 >= 3) {
-            std::cout << "DANGER: HIGH CO2 CONCENTRATION (" << co2 << "%)" << std::endl << std::endl;
-        } else if (co2 >= 1) {
-            std::cout << "Warning: excessive CO2 concentration (" << co2 << "%)" << std::endl << std::endl;
-        }
-
-
+        tempcmd = new StatusCommand{state_ptr};
     } else if (cmd == "next" && statePresent) {
         game->next();
     } else if (cmd == "new") {
@@ -151,5 +141,5 @@ Commandlet* DefaultCommand::runCommand(std::string cmd) {
 
     abort_new:
 
-    return this;
+    return tempcmd;
 }

@@ -8,7 +8,7 @@
 class DefaultCommand : public Commandlet {
     public:
         DefaultCommand(Game** stateptr):
-            Commandlet{stateptr} {};
+            Commandlet{"Default", stateptr} {};
         virtual ~DefaultCommand() {};
 
         virtual Commandlet* runCommand(std::string) override;

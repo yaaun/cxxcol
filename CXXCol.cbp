@@ -40,6 +40,12 @@
 		<Unit filename="src/Commandlet.hpp" />
 		<Unit filename="src/DefaultCommand.cpp" />
 		<Unit filename="src/DefaultCommand.hpp" />
+		<Unit filename="src/DeferredAction.cpp" />
+		<Unit filename="src/DeferredAction.hpp" />
+		<Unit filename="src/StatusCommand.cpp" />
+		<Unit filename="src/StatusCommand.hpp" />
+		<Unit filename="src/game/Barrack.cpp" />
+		<Unit filename="src/game/Barrack.hpp" />
 		<Unit filename="src/game/Building.cpp" />
 		<Unit filename="src/game/Building.hpp" />
 		<Unit filename="src/game/Game.cpp" />
