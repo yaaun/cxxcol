@@ -4,11 +4,13 @@
 #include "Building.hpp"
 
 
-class Barrack : public Building
-{
+class Barrack : public Building {
     public:
-        Barrack();
-        virtual ~Barrack();
+        Barrack() {}
+        virtual ~Barrack() {}
+
+        virtual unsigned getCapacity() override;
+        virtual unsigned getPowerUsage() override;
 
     protected:
 

@@ -23,8 +23,6 @@ class Building {
 
         virtual bool isBroken() const {return broken;}
         virtual void setBroken(bool brk) {broken = brk;}
-
-        static Building* create(const std::string& type);
     protected:
         std::string name;
         int health, max_health;

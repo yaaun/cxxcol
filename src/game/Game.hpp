@@ -42,14 +42,18 @@ class Game {
         unsigned getScrubberCapacity() const;
         unsigned getPowerCapacity() const;
 
-        std::list<Building*> getBuildingsByType(const std::string& type);
-        unsigned countBuildingsByType(const std::string& type);
+        std::list<Building*> getBuildingsByType(std::string type);
+        unsigned countBuildingsByType(std::string type);
+
+        Building* createBuilding(std::string type);
     protected:
 
     private:
         long long credits = 0;
         unsigned turn_counter = 0;
+        unsigned building_counter = 1;
 
+        std::map<unsigned, Building*> building_register;
         std::multimap<std::string, Building*> buildings;
         std::string planetName;
         std::map<std::string, Resource> resources;

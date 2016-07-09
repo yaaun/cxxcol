@@ -19,7 +19,7 @@
 
 1467721831 c:\users\tomasz\development\cpp\cxxcol\src\key_translate.hpp
 
-1468065711 source:c:\users\tomasz\development\cpp\cxxcol\src\main.cpp
+1468091763 source:c:\users\tomasz\development\cpp\cxxcol\src\main.cpp
 	<iostream>
 	<string>
 	<cstdlib>
@@ -66,7 +66,7 @@
 	"Game.hpp"
 	<utility>
 
-1467914230 c:\users\tomasz\development\cpp\cxxcol\src\game\game.hpp
+1468093160 c:\users\tomasz\development\cpp\cxxcol\src\game\game.hpp
 	<list>
 	<map>
 	<string>
@@ -76,7 +76,7 @@
 1467910926 source:c:\users\tomasz\development\cpp\cxxcol\src\game\building.cpp
 	"Building.hpp"
 
-1467913092 c:\users\tomasz\development\cpp\cxxcol\src\game\building.hpp
+1468092472 c:\users\tomasz\development\cpp\cxxcol\src\game\building.hpp
 	<string>
 
 1467821386 source:c:\users\tomasz\development\cpp\cxxcol\src\misc\randgen.cpp
@@ -92,12 +92,15 @@
 	<string>
 	"game/Game.hpp"
 
-1468065773 source:c:\users\tomasz\development\cpp\cxxcol\src\defaultcommand.cpp
+1468091689 source:c:\users\tomasz\development\cpp\cxxcol\src\defaultcommand.cpp
 	<iostream>
 	<iomanip>
 	<string>
 	"Commandlet.hpp"
 	"DefaultCommand.hpp"
+	"AirCommand.hpp"
+	"NewCommand.hpp"
+	"PowerCommand.hpp"
 	"StatusCommand.hpp"
 	"game/Game.hpp"
 	"game/Building.hpp"
@@ -134,11 +137,33 @@
 1467914621 c:\users\tomasz\development\cpp\cxxcol\src\game\barrack.hpp
 	"Building.hpp"
 
-1468065403 source:c:\users\tomasz\development\cpp\cxxcol\src\statuscommand.cpp
+1468066076 source:c:\users\tomasz\development\cpp\cxxcol\src\statuscommand.cpp
 	"StatusCommand.hpp"
 	<iostream>
 	<iomanip>
 
 1468065079 c:\users\tomasz\development\cpp\cxxcol\src\statuscommand.hpp
 	"Commandlet.hpp"
+
+1468091376 c:\users\tomasz\development\cpp\cxxcol\src\aircommand.hpp
+	"Commandlet.hpp"
+
+1468091382 c:\users\tomasz\development\cpp\cxxcol\src\newcommand.hpp
+	"Commandlet.hpp"
+
+1468091398 c:\users\tomasz\development\cpp\cxxcol\src\powercommand.hpp
+	"Commandlet.hpp"
+
+1468091706 source:c:\users\tomasz\development\cpp\cxxcol\src\newcommand.cpp
+	"NewCommand.hpp"
+	<iostream>
+	"misc/randgen.hpp"
+
+1468090851 source:c:\users\tomasz\development\cpp\cxxcol\src\powercommand.cpp
+	"PowerCommand.hpp"
+
+1468091612 source:c:\users\tomasz\development\cpp\cxxcol\src\aircommand.cpp
+	"AirCommand.hpp"
+	<iostream>
+	<iomanip>
 

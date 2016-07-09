@@ -36,12 +36,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="src/AirCommand.cpp" />
+		<Unit filename="src/AirCommand.hpp" />
+		<Unit filename="src/BuildCommand.cpp" />
+		<Unit filename="src/BuildCommand.hpp" />
 		<Unit filename="src/Commandlet.cpp" />
 		<Unit filename="src/Commandlet.hpp" />
 		<Unit filename="src/DefaultCommand.cpp" />
 		<Unit filename="src/DefaultCommand.hpp" />
 		<Unit filename="src/DeferredAction.cpp" />
 		<Unit filename="src/DeferredAction.hpp" />
+		<Unit filename="src/NewCommand.cpp" />
+		<Unit filename="src/NewCommand.hpp" />
+		<Unit filename="src/PowerCommand.cpp" />
+		<Unit filename="src/PowerCommand.hpp" />
 		<Unit filename="src/StatusCommand.cpp" />
 		<Unit filename="src/StatusCommand.hpp" />
 		<Unit filename="src/game/Barrack.cpp" />

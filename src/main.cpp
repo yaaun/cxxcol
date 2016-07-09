@@ -40,7 +40,7 @@ int main() {
             tempcmd = cmd->runCommand(command);
             running = cmd->keepRunning();
 
-            std::cout << tempcmd;
+            //std::cout << tempcmd;
 
             //  For one-off tempcmds.
             if (tempcmd != nullptr) {

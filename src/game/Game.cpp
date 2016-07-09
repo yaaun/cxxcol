@@ -1,6 +1,11 @@
 #include "Game.hpp"
 
+#include <iostream>
 #include <utility>
+
+#include "game/Building.hpp"
+#include "game/Barrack.hpp"
+#include "game/Scrubber.hpp"
 
 
 Game::Game()
@@ -15,7 +20,9 @@ Game::Game(std::string planetName):
 }
 
 Game::~Game() {
-    //dtor
+    for (auto v : building_register) {
+        delete v.second;
+    }
 }
 
 void Game::next() {
@@ -124,7 +131,7 @@ unsigned Game::getPowerCapacity() const {
     return cap;
 }
 
-std::list<Building*> Game::getBuildingsByType(const std::string& type) {
+std::list<Building*> Game::getBuildingsByType(std::string type) {
     auto iter = buildings.find(type);
     std::list<Building*> results;
 
@@ -133,4 +140,19 @@ std::list<Building*> Game::getBuildingsByType(const std::string& type) {
     }
 
     return results;
+}
+
+Building* Game::createBuilding(std::string type) {
+    Building* ptr;
+
+    if (type == "Barrack") {
+        ptr = new Barrack;
+        buildings.insert({type, ptr});
+        building_register.insert({building_counter++, ptr});
+    } else {
+        std::cerr << "Internal error: invalid building type '" << type << "'" << std::endl;
+        ptr = nullptr;
+    }
+
+    return ptr;
 }

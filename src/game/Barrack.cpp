@@ -1,11 +1,10 @@
 #include "Barrack.hpp"
 
-Barrack::Barrack()
-{
-    //ctor
+
+unsigned Barrack::getCapacity() {
+    return 15;
 }
 
-Barrack::~Barrack()
-{
-    //dtor
+unsigned Barrack::getPowerUsage() {
+    return 5;
 }

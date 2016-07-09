@@ -4,8 +4,7 @@
 #include "Commandlet.hpp"
 
 
-class StatusCommand : public Commandlet
-{
+class StatusCommand : public Commandlet {
     public:
         StatusCommand(Game** stateptr):
             Commandlet{"Status", stateptr} {}
